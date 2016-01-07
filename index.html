@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="renderer" content="webkit" />
+		<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0,  user-scalable=0;" name="viewport" />
+		<script type="text/javascript" src="jquery/jquery.min.js" ></script>
+		
+		
+		<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+		
+		<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+		
+		
+		<link rel="stylesheet" href="mdl/material.min.css" />
+		<script type="text/javascript" src="mdl/material.min.js"></script>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		
+		
+		<link rel="stylesheet" href="mylib/css/my_alert.css" />
+		<script type="text/javascript" src="mylib/js/my_alert.js" ></script>
+		
+		<link rel="stylesheet" href="mylib/css/my_progress.css" />
+		<script type="text/javascript" src="mylib/js/my_progress.js" ></script>
+		
+		<link rel="stylesheet" href="mylib/css/my_shark.css" />
+		<script type="text/javascript" src="mylib/js/my_shark.js" ></script>
+			
+			
+		
+		<link rel="stylesheet" href="css/main.css" />
+		
+		<link rel="stylesheet" href="css/index.css" />
+		<script type="text/javascript" src="js/index.js" ></script>
+			
+			
+		<meta charset="UTF-8">
+		<title></title>
+
+	</head>
+
+	<body>
+		<div style="overflow: hidden;" class="mdl-layout mdl-js-layout mdl-layout--fixed-header
+            mdl-layout--fixed-tabs">
+			<header class="mdl-layout__header">
+				<div class="mdl-layout__header-row">
+					<!-- Title -->
+					<span class="mdl-layout-title">摸鱼大师</span>
+
+					<!-- Add spacer, to align navigation to the right -->
+					<div class="mdl-layout-spacer"></div>
+					<!-- Navigation -->
+					<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable
+                  mdl-textfield--floating-label mdl-textfield--align-right">
+						<label class="mdl-button mdl-js-button mdl-button--icon" for="waterfall-exp">
+							<i class="material-icons">search</i>
+						</label>
+						<div class="mdl-textfield__expandable-holder">
+							<input class="mdl-textfield__input" type="text" name="sample" id="waterfall-exp">
+						</div>
+					</div>
+					<nav class="mdl-navigation">
+						<a class="mdl-navigation__link" href="javascript:" onclick="_my_alert.showHint('Alert');">Alert</a>
+						<a class="mdl-navigation__link" href="javascript:" onclick="_my_progress.fakeProgressALittleTime();">Progress</a>
+						<a class="mdl-navigation__link" href="javascript:" onclick="_my_shark.shark($(this))">Link</a>
+						<button class="mdl-button mdl-js-button mdl-button--icon" id="addButton">
+						  <i class="material-icons">add</i>
+						</button>
+						<ul class="mdl-menu mdl-menu--bottom-right mdl-js-menu mdl-js-ripple-effect"
+						    for="addButton">
+						  <li class="mdl-menu__item">Some Action</li>
+						  <li class="mdl-menu__item">Another Action</li>
+						  <li disabled class="mdl-menu__item">Disabled Action</li>
+						  <li class="mdl-menu__item">Yet Another Action</li>
+						</ul>
+					</nav>
+
+				</div>
+				<!-- Tabs -->
+				<div class="mdl-layout__tab-bar mdl-js-ripple-effect">
+					<a href="#fixed-tab-mofish" id="tab_mofish" class="mdl-layout__tab is-active">摸鱼</a>
+					<a href="#fixed-tab-menu" class="mdl-layout__tab">菜单</a>
+					<a href="#fixed-tab-shop" class="mdl-layout__tab">商店</a>
+				</div>
+			</header>
+			
+			<main class="mdl-layout__content">
+				<section class="mdl-layout__tab-panel is-active" id="fixed-tab-mofish">
+										<div class="page-content ">
+						<!-- Your content goes here -->
+						
+					</div>
+				</section>
+				<section class="mdl-layout__tab-panel" id="fixed-tab-menu">
+
+					<div class="page-content">
+						<table class="mdl-data-table mdl-js-data-table mdl-data-table--selectable mdl-shadow--2dp">
+  <thead>
+    <tr>
+      <th class="mdl-data-table__cell--non-numeric">Material</th>
+      <th>Quantity</th>
+      <th>Unit price</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Acrylic (Transparent)</td>
+      <td>25</td>
+      <td>$2.90</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Plywood (Birch)</td>
+      <td>50</td>
+      <td>$1.25</td>
+    </tr>
+    <tr>
+      <td class="mdl-data-table__cell--non-numeric">Laminate (Gold on Blue)</td>
+      <td>10</td>
+      <td>$2.35</td>
+    </tr>
+  </tbody>
+</table>
+					</div>
+				</section>
+				<section class="mdl-layout__tab-panel" id="fixed-tab-shop">
+					<div class="page-content mdl-grid" style="background-color: gainsboro;">
+						<!-- Your content goes here -->
+						
+					</div>
+				</section>
+			</main>
+		</div>
+		
+		
+		<templat style="display: none;">
+			<div id="card" class="userlistitem mdl-card mdl-shadow--2dp mdl-cell mdl-cell--4-col mdl-grid">
+
+							<div class="mdl-card__title">
+					<h2 name="title" class="mdl-card__title-text">自动摸鱼</h2> </div>
+				<div name="desc" class="mdl-card__supporting-text"> Lorem ipsum dolor sit amet</div>
+				<div class="mdl-card__actions mdl-card--border"> <button  name="buy" style="float:right;height: 48px;" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect"> <i class="material-icons mdl-color-text--red" style="font-size: 36px;">shopping_cart</i></button> </div>
+				
+				<div class="mdl-card__menu">
+					<button  name="help" class="mdl-button mdl-button--icon mdl-js-button mdl-js-ripple-effect"> <i class="material-icons mdl-color-text--red">help</i> </button>
+				</div>
+			</div>
+
+
+		</templat>
+
+	</body>
+
+
+
+
+</html>
