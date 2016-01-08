@@ -24,6 +24,19 @@ var My_Shark = function(){
 	},1400);
 			}
     
+    
+    this.shortshark =function  (obj,callback) {
+				obj.removeClass("shark");
+					var st =setTimeout(function () {
+		obj.addClass("shark");
+	},10);
+				
+					var st2 =setTimeout(function () {
+		obj.removeClass("shark");
+		callback();
+	},300);
+			}
+    
 };  
   
 var _my_shark=new My_Shark();
